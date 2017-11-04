@@ -11,7 +11,6 @@ Table of Contents
 =================
 
 * [学习方法](#%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95)
-* [算法思想](#%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3)
 * [推荐阅读](#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB)
   * [☆☆☆☆☆基础](#%E5%9F%BA%E7%A1%80)
   * [☆☆☆☆☆算法演示](#%E7%AE%97%E6%B3%95%E6%BC%94%E7%A4%BA)
@@ -34,16 +33,6 @@ Table of Contents
 4. 找志同道合的人一起交流学习
 5. 参加比赛
 6. 。。。
-
-## 算法思想 ##
-
-- 迭代法
-- 穷举搜索法
-- 递推法
-- 动态规划
-- 贪心算法
-- 回溯
-- 分治算法
 
 ----
 
@@ -102,6 +91,4 @@ Table of Contents
 
 ## License ##
 
-Book License: CC BY-SA 3.0 License
-
-Code License: BSD 3-Clause License
+License: BSD 3-Clause License
