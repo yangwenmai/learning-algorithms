@@ -1,2 +1,3 @@
-# Learning-Algorithms
-算法学习
+# 算法学习(Learning-Algorithms)
+[![Build Status](https://travis-ci.org/yangwenmai/Learning-Algorithms.svg?branch=master)](https://travis-ci.org/yangwenmai/Learning-Algorithms) [![Go Report Card](https://goreportcard.com/badge/github.com/yangwenmai/Learning-Algorithms)](https://goreportcard.com/report/github.com/yangwenmai/Learning-Algorithms)  [![Documentation](https://godoc.org/github.com/yangwenmai/Learning-Algorithms?status.svg)](http://godoc.org/github.com/yangwenmai/Learning-Algorithms) [![Coverage Status](https://coveralls.io/repos/github/yangwenmai/Learning-Algorithms/badge.svg?branch=master)](https://coveralls.io/github/yangwenmai/Learning-Algorithms?branch=master) [![GitHub issues](https://img.shields.io/github/issues/yangwenmai/Learning-Algorithms.svg)](https://github.com/yangwenmai/Learning-Algorithms/issues) [![license](https://img.shields.io/github/license/yangwenmai/Learning-Algorithms.svg?maxAge=2592000)](https://github.com/yangwenmai/Learning-Algorithms/LICENSE) [![Release](https://img.shields.io/github/release/yangwenmai/Learning-Algorithms.svg?label=Release)](https://github.com/yangwenmai/Learning-Algorithms/releases)
+

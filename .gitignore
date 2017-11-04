@@ -4,6 +4,8 @@
 *.so
 *.dylib
 
+*.swp
+
 # Test binary, build with `go test -c`
 *.test
 
