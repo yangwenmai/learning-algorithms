@@ -1,9 +1,9 @@
-## 算法学习(Learning-Algorithms) ##
-[![Build Status](https://travis-ci.org/yangwenmai/Learning-Algorithms.svg?branch=master)](https://travis-ci.org/yangwenmai/Learning-Algorithms) [![Go Report Card](https://goreportcard.com/badge/github.com/yangwenmai/Learning-Algorithms)](https://goreportcard.com/report/github.com/yangwenmai/Learning-Algorithms)  [![Documentation](https://godoc.org/github.com/yangwenmai/Learning-Algorithms?status.svg)](http://godoc.org/github.com/yangwenmai/Learning-Algorithms) [![Coverage Status](https://coveralls.io/repos/github/yangwenmai/Learning-Algorithms/badge.svg?branch=master)](https://coveralls.io/github/yangwenmai/Learning-Algorithms?branch=master) [![GitHub issues](https://img.shields.io/github/issues/yangwenmai/Learning-Algorithms.svg)](https://github.com/yangwenmai/Learning-Algorithms/issues) [![license](https://img.shields.io/github/license/yangwenmai/Learning-Algorithms.svg?maxAge=2592000)](https://github.com/yangwenmai/Learning-Algorithms/LICENSE) [![Release](https://img.shields.io/github/release/yangwenmai/Learning-Algorithms.svg?label=Release)](https://github.com/yangwenmai/Learning-Algorithms/releases)
+## 算法学习(learning-algorithms) ##
+[![Build Status](https://travis-ci.org/yangwenmai/learning-algorithms.svg?branch=master)](https://travis-ci.org/yangwenmai/learning-algorithms) [![Go Report Card](https://goreportcard.com/badge/github.com/yangwenmai/learning-algorithms)](https://goreportcard.com/report/github.com/yangwenmai/learning-algorithms)  [![Documentation](https://godoc.org/github.com/yangwenmai/learning-algorithms?status.svg)](http://godoc.org/github.com/yangwenmai/learning-algorithms) [![Coverage Status](https://coveralls.io/repos/github/yangwenmai/learning-algorithms/badge.svg?branch=master)](https://coveralls.io/github/yangwenmai/learning-algorithms?branch=master) [![GitHub issues](https://img.shields.io/github/issues/yangwenmai/learning-algorithms.svg)](https://github.com/yangwenmai/learning-algorithms/issues) [![license](https://img.shields.io/github/license/yangwenmai/learning-algorithms.svg?maxAge=2592000)](https://github.com/yangwenmai/learning-algorithms/LICENSE) [![Release](https://img.shields.io/github/release/yangwenmai/learning-algorithms.svg?label=Release)](https://github.com/yangwenmai/learning-algorithms/releases)
 
 如果你正在算法之门外彷徨，如果你正在发愁不知道该怎么进行算法学习，或许本项目能够适合你。
 
-本项目是我准备的算法学习历程，包括我对算法书籍的整理，算法实践（Golang实现），以及各种算法的理解，也还会有一些有关方面的经验总结。
+本项目是我准备的算法学习历程，包括我对算法书籍的整理，算法实践（Go 实现），以及各种算法的理解，也还会有一些有关方面的经验总结。
 
 >希望有更多的人参与进来，咱们一起前行，一起精进。
 
@@ -24,6 +24,24 @@ Table of Contents
   * [2\. <a href="http://blog\.csdn\.net/v\_july\_v">July 博客</a>](#2-july-%E5%8D%9A%E5%AE%A2)
 * [如何参与/贡献？](#%E5%A6%82%E4%BD%95%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE)
 * [License](#license)
+
+----
+
+## 实践
+
+### 开发环境
+
+- macOS 10.14.3
+- go version go1.12 darwin/amd64
+- GoLand
+
+### algocasts
+
+- [algocasts.io](./algocasts.io/README.md)
+
+### 排序
+
+- [sort](./sort/README.md)
 
 ----
 
@@ -85,7 +103,7 @@ Table of Contents
 ## 如何参与/贡献？ ##
 
 1. Fork 此项目
-2. 克隆你自己的项目到你本地 （git clone https://github.com/your_github_name/Learning-Algorithms.git）
+2. 克隆你自己的项目到你本地 （git clone https://github.com/your_github_name/learning-algorithms.git）
 2. 创建你新的 feature 分支 (git checkout -b my_feature)
 3. 添加并提交你的修改内容 (git commit -am 'Add some feature')
 4. 推送到你自己项目的远端 feature 分支 (git push origin my_feature)

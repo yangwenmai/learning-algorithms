@@ -12,12 +12,12 @@ const (
 |_______||_______|/__/     \__\ | _|  ._____||__| \__| |__| |__| \__|  \______|         /__/     \__\ |_______| \______|  \______/  | _|  ._____||__|     |__|     |__|  |__| |__|  |__| |_______/
 `
 
-	Version = "2017-11-03 07:37:47 +0800 @"
-	Compile = "2017-11-03 07:38:33 +0800 by go version go1.9.2 darwin/amd64"
+	Version = "2019-03-07 03:37:47 +0800 @"
+	Compile = "2019-03-07 03:37:47 +0800 by go version go1.12 darwin/amd64"
 )
 
 func main() {
-	fmt.Println("Let's start learning the algorithms together.")
+	fmt.Println("Let's start to learning algorithms!")
 	fmt.Println(banner)
 	fmt.Printf("Git commit:%s\n", Version)
 	fmt.Printf("Build time:%s\n", Compile)
