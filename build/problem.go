@@ -92,23 +92,24 @@ var typeMap = map[string]string{
 func creatGo(p leetcode.Problem, detail *leetcode.Question, function, ansType string) {
 
 	fileFormat := `package %s
+
 /*
-[%d] %s
+	[%d] %s
 
-https://leetcode.com/problems/%s/description/
+	https://leetcode.com/problems/%s/description/
 
-algorithms %s (%s)
-Total Accepted:    %s(%d)
-Total Submissions: %s(%d)
-Testcase Example:  '%s'
+	algorithms %s (%s)
+	Total Accepted:    %s(%d)
+	Total Submissions: %s(%d)
 
 %s
 */
+
 %s`
 	content := fmt.Sprintf(fileFormat,
-		p.PackageName(), p.ID, p.Title, p.TitleSlug, p.Difficulty,
-		detail.Stats.AcRate, detail.Stats.TotalAccepted, detail.Stats.TotalAcceptedRaw,
-		detail.Stats.TotalSubmission, detail.Stats.TotalSubmissionRaw, "",
+		p.PackageName(), p.ID, p.Title, p.TitleSlug, p.Difficulty, detail.Stats.AcRate,
+		detail.Stats.TotalAccepted, detail.Stats.TotalAcceptedRaw,
+		detail.Stats.TotalSubmission, detail.Stats.TotalSubmissionRaw,
 		strings.TrimSpace(detail.Content), function)
 
 	returns := "\treturn nil\n}"
@@ -125,10 +126,8 @@ func creatGoTest(p leetcode.Problem, fcName, para, ansType string) {
 	%s
 	ans %s
 }{
-
-
-
 	// 可以有多个 testcase
+
 }`
 
 	para = strings.Replace(para, ",", "\n", -1)
