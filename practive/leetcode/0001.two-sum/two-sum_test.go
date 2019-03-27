@@ -25,9 +25,9 @@ var tcs = []struct {
 		10,
 		[]int{1, 4},
 	},
-	{[]int{1, 2, 3, 6, 8, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20},
+	{[]int{1, 2, 3, 6, 7, 11, 12, 13, 16, 17, 20, 21, 22, 24},
 		21,
-		[]int{0, 14},
+		[]int{0, 10},
 	},
 }
 
@@ -56,6 +56,7 @@ func Test_twoSum3(t *testing.T) {
 }
 
 // Benchmark_twoSum-8   	20000000	       105 ns/op
+// Benchmark_twoSum-8   	 5000000	       238 ns/op
 func Benchmark_twoSum(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		for _, tc := range tcs {
@@ -65,6 +66,7 @@ func Benchmark_twoSum(b *testing.B) {
 }
 
 // Benchmark_twoSum2-8   	20000000	        83.6 ns/op
+// Benchmark_twoSum2-8   	10000000	       122 ns/op
 func Benchmark_twoSum2(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		for _, tc := range tcs {
@@ -74,6 +76,8 @@ func Benchmark_twoSum2(b *testing.B) {
 }
 
 // Benchmark_twoSum3-8   	 5000000	       271 ns/op
+// Benchmark_twoSum3-8   	 3000000	       546 ns/op
+// Benchmark_twoSum3-8   	 2000000	       868 ns/op
 func Benchmark_twoSum3(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		for _, tc := range tcs {
