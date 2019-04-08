@@ -64,5 +64,4 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		curr.Next = &ListNode{carry, nil}
 	}
 	return head.Next
-
 }
