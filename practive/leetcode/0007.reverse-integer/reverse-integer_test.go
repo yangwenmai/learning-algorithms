@@ -8,12 +8,12 @@ import (
 
 // tcs is testcase slice
 var tcs = []struct {
-	x int
+	x   int
 	ans int
 }{
-
-
-
+	{123, 321},
+	{-123, -321},
+	{120, 21},
 	// 可以有多个 testcase
 }
 

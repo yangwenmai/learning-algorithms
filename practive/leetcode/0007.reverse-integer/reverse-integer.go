@@ -1,4 +1,5 @@
 package problem0007
+
 /*
 [7] Reverse Integer
 
@@ -37,6 +38,25 @@ Output: 21
 Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
 */
 func reverse(x int) int {
-
-	return 0
+	isNeg := false
+	if x < 0 {
+		isNeg = true
+		x = -x
+	}
+	var Max = 1<<31 - 1
+	if x == 0 {
+		return 0
+	}
+	var y int
+	for x > 0 {
+		y = y*10 + x%10
+		x = x / 10
+	}
+	if y > Max {
+		y = 0
+	}
+	if isNeg {
+		y = -y
+	}
+	return y
 }
