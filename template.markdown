@@ -42,7 +42,7 @@ Password="your leetcode password"
 ### 开发环境
 
 - macOS 10.14.3
-- go version go1.12 darwin/amd64
+- go version go1.12.3 darwin/amd64
 - GoLand
 
 ## 完成清单
