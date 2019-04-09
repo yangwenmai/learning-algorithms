@@ -54,6 +54,18 @@ Password="your leetcode password"
 |:-:|:-|:-: | :-: | :-: |
 |[0001](https://leetcode.com/problems/two-sum/)|✅[Two Sum](./practive/leetcode/0001.two-sum)|43%|Easy||
 |[0002](https://leetcode.com/problems/add-two-numbers/)|✅[Add Two Numbers](./practive/leetcode/0002.add-two-numbers)|30%|Medium||
+|[0007](https://leetcode.com/problems/reverse-integer/)|✅[Reverse Integer](./practive/leetcode/0007.reverse-integer)|25%|Easy||
+|[0009](https://leetcode.com/problems/palindrome-number/)|✅[Palindrome Number](./practive/leetcode/0009.palindrome-number)|42%|Easy||
+|[0042](https://leetcode.com/problems/trapping-rain-water/)|✅[Trapping Rain Water](./practive/leetcode/0042.trapping-rain-water)|42%|Hard||
+|[0125](https://leetcode.com/problems/valid-palindrome/)|✅[Valid Palindrome](./practive/leetcode/0125.valid-palindrome)|30%|Easy||
+
+
+## 未完成清单
+
+|题号|题目|通过率|难度|收藏|
+|:-:|:-|:-: | :-: | :-: |
+|[0001](https://leetcode.com/problems/two-sum/)|✅[Two Sum](./practive/leetcode/0001.two-sum)|43%|Easy||
+|[0002](https://leetcode.com/problems/add-two-numbers/)|✅[Add Two Numbers](./practive/leetcode/0002.add-two-numbers)|30%|Medium||
 |[0003](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| * Longest Substring Without Repeating Characters|28%|Medium||
 |[0004](https://leetcode.com/problems/median-of-two-sorted-arrays/)| * Median of Two Sorted Arrays|25%|Hard||
 |[0005](https://leetcode.com/problems/longest-palindromic-substring/)| * Longest Palindromic Substring|26%|Medium||
