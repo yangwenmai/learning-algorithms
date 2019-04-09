@@ -31,6 +31,17 @@ func (ps problems) available() problems {
 	return res
 }
 
+func (ps problems) completed() problems {
+	var res []Problem
+	for i := 0; i < len(ps); i++ {
+		p := ps[i]
+		if p.IsAccepted {
+			res = append(res, p)
+		}
+	}
+	return res
+}
+
 func (ps problems) favorite() problems {
 	res := make([]Problem, 0, len(ps))
 	size := len(ps)

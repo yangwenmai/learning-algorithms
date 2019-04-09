@@ -153,6 +153,10 @@ func (lc *Leetcode) ProgressTable() string {
 	return lc.Record.ProgressTable()
 }
 
+func (lc *Leetcode) CompletedTable() string {
+	return lc.Problems.completed().table()
+}
+
 func (lc *Leetcode) AvailableTable() string {
 	return lc.Problems.available().table()
 }
