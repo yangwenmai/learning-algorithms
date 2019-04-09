@@ -47,6 +47,10 @@ Password="your leetcode password"
 
 ## 完成清单
 
+{{.CompletedTable}}
+
+## 未完成清单
+
 {{.AvailableTable}}
 
 以下免费的算法题，暂时不能提交 Go 解答
