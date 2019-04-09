@@ -66,6 +66,5 @@ func readTMPL(path string) string {
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	return string(data)
 }
