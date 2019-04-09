@@ -1,10 +1,10 @@
 {
 	"Username": "maiyang",
 	"Ranking": 100001,
-	"Updated": "2019-04-09T07:06:09.679265+08:00",
+	"Updated": "2019-04-09T08:07:12.604032+08:00",
 	"Record": {
 		"Easy": {
-			"Solved": 3,
+			"Solved": 4,
 			"Total": 237
 		},
 		"Medium": {
@@ -16,7 +16,7 @@
 			"Total": 173
 		},
 		"Total": {
-			"Solved": 5,
+			"Solved": 6,
 			"Total": 813
 		}
 	},
@@ -135,7 +135,7 @@
 			"TitleSlug": "palindrome-number",
 			"PassRate": "42%",
 			"Difficulty": "Easy",
-			"IsAccepted": false,
+			"IsAccepted": true,
 			"IsPaid": false,
 			"IsFavor": false,
 			"IsNew": false,
@@ -11293,7 +11293,7 @@
 			"ID": 939,
 			"Title": "Minimum Area Rectangle",
 			"TitleSlug": "minimum-area-rectangle",
-			"PassRate": "50%",
+			"PassRate": "49%",
 			"Difficulty": "Medium",
 			"IsAccepted": false,
 			"IsPaid": false,
