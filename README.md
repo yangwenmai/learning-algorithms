@@ -33,6 +33,34 @@ Username="your leetcode username"
 Password="your leetcode password"
 ```
 
+### 使用方法
+
+0. 构建
+
+```bash
+go build
+```
+
+或者
+
+```bash
+go install
+```
+
+1. 准备题目：
+
+```bash
+go run main.go prepare -number 146 -lang golang -dir practive/leetcode_golang
+go run main.go prepare -number 146 -lang c++ -dir practive/leetcode_c++
+go run main.go prepare -number 146 -lang java -dir practive/leetcode_java
+```
+
+2. 更新 README
+
+```bash
+go run main.go readme
+``` 
+
 ## 进度
 
 >统计范围：能提交 Go 解答的免费算法题。
@@ -52,28 +80,28 @@ Password="your leetcode password"
 
 |题号|题目|通过率|难度|收藏|
 |:-:|:-|:-: | :-: | :-: |
-|[0001](https://leetcode.com/problems/two-sum/)|✅[Two Sum](./practive/leetcode/0001.two-sum)|44%|Easy||
-|[0002](https://leetcode.com/problems/add-two-numbers/)|✅[Add Two Numbers](./practive/leetcode/0002.add-two-numbers)|31%|Medium||
-|[0007](https://leetcode.com/problems/reverse-integer/)|✅[Reverse Integer](./practive/leetcode/0007.reverse-integer)|25%|Easy||
-|[0009](https://leetcode.com/problems/palindrome-number/)|✅[Palindrome Number](./practive/leetcode/0009.palindrome-number)|43%|Easy||
-|[0042](https://leetcode.com/problems/trapping-rain-water/)|✅[Trapping Rain Water](./practive/leetcode/0042.trapping-rain-water)|43%|Hard||
-|[0125](https://leetcode.com/problems/valid-palindrome/)|✅[Valid Palindrome](./practive/leetcode/0125.valid-palindrome)|31%|Easy||
-|[0146](https://leetcode.com/problems/lru-cache/)|✅[LRU Cache](./practive/leetcode/0146.lru-cache)|25%|Hard||
+|[0001](https://leetcode.com/problems/two-sum/)|✅[Two Sum](.//0001.two-sum)|44%|Easy||
+|[0002](https://leetcode.com/problems/add-two-numbers/)|✅[Add Two Numbers](.//0002.add-two-numbers)|31%|Medium||
+|[0007](https://leetcode.com/problems/reverse-integer/)|✅[Reverse Integer](.//0007.reverse-integer)|25%|Easy||
+|[0009](https://leetcode.com/problems/palindrome-number/)|✅[Palindrome Number](.//0009.palindrome-number)|43%|Easy||
+|[0042](https://leetcode.com/problems/trapping-rain-water/)|✅[Trapping Rain Water](.//0042.trapping-rain-water)|43%|Hard||
+|[0125](https://leetcode.com/problems/valid-palindrome/)|✅[Valid Palindrome](.//0125.valid-palindrome)|31%|Easy||
+|[0146](https://leetcode.com/problems/lru-cache/)|✅[LRU Cache](.//0146.lru-cache)|25%|Hard||
 
 
 ## 未完成清单
 
 |题号|题目|通过率|难度|收藏|
 |:-:|:-|:-: | :-: | :-: |
-|[0001](https://leetcode.com/problems/two-sum/)|✅[Two Sum](./practive/leetcode/0001.two-sum)|44%|Easy||
-|[0002](https://leetcode.com/problems/add-two-numbers/)|✅[Add Two Numbers](./practive/leetcode/0002.add-two-numbers)|31%|Medium||
+|[0001](https://leetcode.com/problems/two-sum/)|✅[Two Sum](.//0001.two-sum)|44%|Easy||
+|[0002](https://leetcode.com/problems/add-two-numbers/)|✅[Add Two Numbers](.//0002.add-two-numbers)|31%|Medium||
 |[0003](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| * Longest Substring Without Repeating Characters|28%|Medium||
 |[0004](https://leetcode.com/problems/median-of-two-sorted-arrays/)| * Median of Two Sorted Arrays|26%|Hard||
 |[0005](https://leetcode.com/problems/longest-palindromic-substring/)| * Longest Palindromic Substring|27%|Medium||
 |[0006](https://leetcode.com/problems/zigzag-conversion/)| * ZigZag Conversion|31%|Medium||
-|[0007](https://leetcode.com/problems/reverse-integer/)|✅[Reverse Integer](./practive/leetcode/0007.reverse-integer)|25%|Easy||
+|[0007](https://leetcode.com/problems/reverse-integer/)|✅[Reverse Integer](.//0007.reverse-integer)|25%|Easy||
 |[0008](https://leetcode.com/problems/string-to-integer-atoi/)| * String to Integer (atoi)|14%|Medium||
-|[0009](https://leetcode.com/problems/palindrome-number/)|✅[Palindrome Number](./practive/leetcode/0009.palindrome-number)|43%|Easy||
+|[0009](https://leetcode.com/problems/palindrome-number/)|✅[Palindrome Number](.//0009.palindrome-number)|43%|Easy||
 |[0010](https://leetcode.com/problems/regular-expression-matching/)| * Regular Expression Matching|25%|Hard||
 |[0011](https://leetcode.com/problems/container-with-most-water/)| * Container With Most Water|44%|Medium||
 |[0012](https://leetcode.com/problems/integer-to-roman/)| * Integer to Roman|50%|Medium||
@@ -106,7 +134,7 @@ Password="your leetcode password"
 |[0039](https://leetcode.com/problems/combination-sum/)| * Combination Sum|48%|Medium||
 |[0040](https://leetcode.com/problems/combination-sum-ii/)| * Combination Sum II|41%|Medium||
 |[0041](https://leetcode.com/problems/first-missing-positive/)| * First Missing Positive|28%|Hard||
-|[0042](https://leetcode.com/problems/trapping-rain-water/)|✅[Trapping Rain Water](./practive/leetcode/0042.trapping-rain-water)|43%|Hard||
+|[0042](https://leetcode.com/problems/trapping-rain-water/)|✅[Trapping Rain Water](.//0042.trapping-rain-water)|43%|Hard||
 |[0043](https://leetcode.com/problems/multiply-strings/)| * Multiply Strings|30%|Medium||
 |[0044](https://leetcode.com/problems/wildcard-matching/)| * Wildcard Matching|22%|Hard||
 |[0045](https://leetcode.com/problems/jump-game-ii/)| * Jump Game II|27%|Hard||
@@ -187,7 +215,7 @@ Password="your leetcode password"
 |[0122](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)| * Best Time to Buy and Sell Stock II|51%|Easy||
 |[0123](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)| * Best Time to Buy and Sell Stock III|33%|Hard||
 |[0124](https://leetcode.com/problems/binary-tree-maximum-path-sum/)| * Binary Tree Maximum Path Sum|29%|Hard||
-|[0125](https://leetcode.com/problems/valid-palindrome/)|✅[Valid Palindrome](./practive/leetcode/0125.valid-palindrome)|31%|Easy||
+|[0125](https://leetcode.com/problems/valid-palindrome/)|✅[Valid Palindrome](.//0125.valid-palindrome)|31%|Easy||
 |[0126](https://leetcode.com/problems/word-ladder-ii/)| * Word Ladder II|17%|Hard||
 |[0127](https://leetcode.com/problems/word-ladder/)| * Word Ladder|23%|Medium||
 |[0128](https://leetcode.com/problems/longest-consecutive-sequence/)| * Longest Consecutive Sequence|41%|Hard||
@@ -206,7 +234,7 @@ Password="your leetcode password"
 |[0143](https://leetcode.com/problems/reorder-list/)| * Reorder List|30%|Medium||
 |[0144](https://leetcode.com/problems/binary-tree-preorder-traversal/)| * Binary Tree Preorder Traversal|51%|Medium||
 |[0145](https://leetcode.com/problems/binary-tree-postorder-traversal/)| * Binary Tree Postorder Traversal|48%|Hard||
-|[0146](https://leetcode.com/problems/lru-cache/)|✅[LRU Cache](./practive/leetcode/0146.lru-cache)|25%|Hard||
+|[0146](https://leetcode.com/problems/lru-cache/)|✅[LRU Cache](.//0146.lru-cache)|25%|Hard||
 |[0147](https://leetcode.com/problems/insertion-sort-list/)| * Insertion Sort List|37%|Medium||
 |[0148](https://leetcode.com/problems/sort-list/)| * Sort List|35%|Medium||
 |[0149](https://leetcode.com/problems/max-points-on-a-line/)| * Max Points on a Line|15%|Hard||

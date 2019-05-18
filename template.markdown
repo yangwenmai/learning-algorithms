@@ -33,6 +33,34 @@ Username="your leetcode username"
 Password="your leetcode password"
 ```
 
+### 使用方法
+
+0. 构建
+
+```bash
+go build
+```
+
+或者
+
+```bash
+go install
+```
+
+1. 准备题目：
+
+```bash
+go run main.go prepare -number 146 -lang golang -dir practive/leetcode_golang
+go run main.go prepare -number 146 -lang c++ -dir practive/leetcode_c++
+go run main.go prepare -number 146 -lang java -dir practive/leetcode_java
+```
+
+2. 更新 README
+
+```bash
+go run main.go readme
+``` 
+
 ## 进度
 
 >统计范围：能提交 Go 解答的免费算法题。
