@@ -13,8 +13,8 @@ import (
 
 const (
 	// Version leet code generator version
-	Version = "2019-03-19 09:07:47 +0800 @v0.0.1"
-	Compile = "2019-03-07 03:37:47 +0800 by go version go1.12 darwin/amd64"
+	Version = "2019-05-18 10:00:47 +0800 @v0.0.2"
+	Compile = "2019-05-18 10:00:47 +0800 by go version go1.12 darwin/amd64"
 
 	// Usage 程序的使用方法
 	Usage = `使用方法：
