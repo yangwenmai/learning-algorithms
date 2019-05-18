@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-type Record struct {
+type record struct {
 	Easy, Medium, Hard, Total count
 }
 
@@ -12,7 +12,7 @@ type count struct {
 	Solved, Total int
 }
 
-func (r *Record) ProgressTable() string {
+func (r record) ProgressTable() string {
 	res := fmt.Sprintln("|     |Easy|Medium|Hard|Total|")
 	res += fmt.Sprintln("|:---:|:---:|:---:|:---:|:---:|")
 
@@ -29,7 +29,7 @@ func (r *Record) ProgressTable() string {
 	return res
 }
 
-func (r *Record) Update(p Problem) {
+func (r *record) Update(p Problem) {
 	if !p.IsAvailable() {
 		return
 	}

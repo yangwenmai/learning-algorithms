@@ -63,10 +63,10 @@ func fetchAlgorithms(username string) *algorithms {
 	return res
 }
 
-func parseAlgorithms(alg *algorithms) (*problems, Record) {
+func parseAlgorithms(alg *algorithms) (problems, record) {
 	hasNoGoOption := readUnavailable()
-	problems := &problems{}
-	r := Record{}
+	problems := problems{}
+	r := record{}
 
 	for _, ps := range alg.Problems {
 		p := newProblem(ps)

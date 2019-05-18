@@ -7,9 +7,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/yangwenmai/learning-algorithms/util"
-
 	"github.com/yangwenmai/learning-algorithms/leetcode"
+	"github.com/yangwenmai/learning-algorithms/util"
 )
 
 type DocsBuilder struct {

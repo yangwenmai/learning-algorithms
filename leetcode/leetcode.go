@@ -20,7 +20,7 @@ type Leetcode struct {
 	Ranking  int       // 网站排名
 	Updated  time.Time // 数据更新时间
 
-	Record   Record   // 已解答题目与全部题目的数量，按照难度统计
+	Record   record   // 已解答题目与全部题目的数量，按照难度统计
 	Problems problems // 所有问题的集合
 }
 
@@ -46,7 +46,7 @@ func fetchLeetCode(username string) *Leetcode {
 	lc := &Leetcode{
 		Username: username,
 		Record:   record,
-		Problems: *problems,
+		Problems: problems,
 		Ranking:  fetchUserRanking(username),
 		Updated:  time.Now(),
 	}
@@ -64,7 +64,6 @@ func readLeetCode() (*Leetcode, error) {
 	if err := json.Unmarshal(data, lc); err != nil {
 		return nil, errors.New("转换成 leetcode 时，失败：" + err.Error())
 	}
-
 	return lc, nil
 }
 
