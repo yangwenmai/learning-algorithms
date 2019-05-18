@@ -84,7 +84,10 @@ func createProblemFiles(p leetcode.Problem, lang string) {
 		creatGo(p, detail, fc, ans)
 		creatGoTest(p, fcName, para, ans)
 	case "c++":
+		// TODO: 实现 C++ 的文件和单元测试文件
 		fmt.Println("generate c++ files.")
+	default:
+		log.Printf("暂时还不支持此语言的模板生成。。。")
 	}
 	creatREADME(p, detail)
 
