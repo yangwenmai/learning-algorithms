@@ -33,9 +33,9 @@ func parseFunction(fc string) (fcName, para, ansType, nfc string) {
 	return
 }
 
-func getGoFunction(detail *leetcode.Question) string {
+func getFunction(detail *leetcode.Question, lang string) string {
 	for _, v := range detail.CodeDefinition {
-		if v.Value == "golang" {
+		if v.Value == lang {
 			return v.DefaultCode
 		}
 	}

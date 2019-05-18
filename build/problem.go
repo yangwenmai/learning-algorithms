@@ -17,15 +17,19 @@ import (
 
 type ProblemBuilder struct {
 	*Builder
+	Dir        string
 	ProblemNum int
+	Language   string
 }
 
 func (p *ProblemBuilder) Build() {
 	log.Printf("~~ 开始生成第 %d 题的文件夹 ~~\n", p.ProblemNum)
 
+	fmt.Println(p.Dir, p.Language)
 	prob := p.LC.Problems[p.ProblemNum]
+	prob.SetDir(p.Dir)
 	buildDir(prob)
-	createProblemFiles(prob)
+	createProblemFiles(prob, p.Language)
 	log.Printf("~~ 第 %d 题的文件夹，已经生成 ~~\n", p.ProblemNum)
 }
 
@@ -45,8 +49,8 @@ func CheckProblemNumValid(lc *leetcode.Leetcode, problemNum int) {
 }
 
 func buildDir(p leetcode.Problem) {
-	if GoKit.Exist(p.Dir()) {
-		log.Panicf("第 %d 题的文件夹已经存在，请 **移除** %s 文件夹后，再尝试。", p.ID, p.Dir())
+	if GoKit.Exist(p.GetDir()) {
+		log.Panicf("第 %d 题的文件夹已经存在，请 **移除** %s 文件夹后，再尝试。", p.ID, p.GetDir())
 	}
 
 	defer func() {
@@ -54,29 +58,34 @@ func buildDir(p leetcode.Problem) {
 			debug.PrintStack()
 			log.Println(err)
 			log.Println("清理不必要的文件")
-			os.RemoveAll(p.Dir())
+			os.RemoveAll(p.GetDir())
 		}
 	}()
 
 	mask := syscall.Umask(0)
 	defer syscall.Umask(mask)
 
-	err := os.Mkdir(p.Dir(), 0755)
+	err := os.MkdirAll(p.GetDir(), 0755)
 	if err != nil {
-		log.Panicf("无法创建目录，%s ：%s", p.Dir(), err)
+		log.Panicf("无法创建目录，%s ：%s", p.GetDir(), err)
 	}
 
 	log.Printf("开始创建 %d %s 的文件夹...\n", p.ID, p.Title)
 }
 
-func createProblemFiles(p leetcode.Problem) {
+func createProblemFiles(p leetcode.Problem, lang string) {
 	detail := leetcode.FetchQuestion(p)
 
-	fc := getGoFunction(detail)
+	fc := getFunction(detail, lang)
 	fcName, para, ans, fc := parseFunction(fc)
 
-	creatGo(p, detail, fc, ans)
-	creatGoTest(p, fcName, para, ans)
+	switch lang {
+	case "golang":
+		creatGo(p, detail, fc, ans)
+		creatGoTest(p, fcName, para, ans)
+	case "c++":
+		fmt.Println("generate c++ files.")
+	}
 	creatREADME(p, detail)
 
 	log.Printf("%d.%s 的文件夹，创建完毕。\n", p.ID, p.Title)
@@ -117,7 +126,7 @@ func creatGo(p leetcode.Problem, detail *leetcode.Question, function, ansType st
 		returns = fmt.Sprintf("\treturn %s\n}", v)
 	}
 	content = strings.Replace(content, "}", returns, -1)
-	filename := fmt.Sprintf("%s/%s.go", p.Dir(), p.TitleSlug)
+	filename := fmt.Sprintf("%s/%s.go", p.GetDir(), p.TitleSlug)
 	util.WriteFile(filename, content)
 }
 
@@ -169,7 +178,7 @@ import (
 %s
 `
 	content := fmt.Sprintf(fileFormat, p.PackageName(), testCases, testFunc, benchFunc)
-	filename := fmt.Sprintf("%s/%s_test.go", p.Dir(), p.TitleSlug)
+	filename := fmt.Sprintf("%s/%s_test.go", p.GetDir(), p.TitleSlug)
 	util.WriteFile(filename, content)
 }
 
@@ -200,6 +209,6 @@ func creatREADME(p leetcode.Problem, detail *leetcode.Question) {
 `
 	questionDescription := strings.TrimSpace(detail.Content)
 	content := fmt.Sprintf(fileFormat, p.ID, p.Title, p.Link(), questionDescription)
-	filename := fmt.Sprintf("%s/README.md", p.Dir())
+	filename := fmt.Sprintf("%s/README.md", p.GetDir())
 	util.WriteFile(filename, content)
 }

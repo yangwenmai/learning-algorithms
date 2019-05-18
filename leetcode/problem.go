@@ -5,6 +5,8 @@ import (
 	"strings"
 )
 
+var dir string
+
 type Problem struct {
 	ID                                 int
 	Title                              string
@@ -41,9 +43,12 @@ func (p Problem) IsAvailable() bool {
 	return true
 }
 
-func (p Problem) Dir() string {
-	path := "practive/leetcode"
-	return fmt.Sprintf("./%s/%04d.%s", path, p.ID, p.TitleSlug)
+func (p Problem) SetDir(path string) {
+	dir = path
+}
+
+func (p Problem) GetDir() string {
+	return fmt.Sprintf("./%s/%04d.%s", dir, p.ID, p.TitleSlug)
 }
 
 func (p Problem) Link() string {
@@ -57,7 +62,7 @@ func (p Problem) tableLine() string {
 	// 标题
 	t := ""
 	if p.IsAccepted {
-		t = fmt.Sprintf(`✅[%s](%s)`, strings.TrimSpace(p.Title), p.Dir())
+		t = fmt.Sprintf(`✅[%s](%s)`, strings.TrimSpace(p.Title), p.GetDir())
 	} else {
 		t = fmt.Sprintf(` * %s`, p.Title)
 	}

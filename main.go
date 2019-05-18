@@ -13,8 +13,8 @@ import (
 
 const (
 	// Version leet code generator version
-	Version = "2019-05-18 10:00:47 +0800 @v0.0.2"
-	Compile = "2019-05-18 10:00:47 +0800 by go version go1.12 darwin/amd64"
+	Version = "2019-05-18 11:47:47 +0800 @v0.0.3"
+	Compile = "2019-05-18 11:47:47 +0800 by go version go1.12 darwin/amd64"
 
 	// Usage 程序的使用方法
 	Usage = `使用方法：
@@ -61,12 +61,14 @@ func (c *CommandClient) checkArgs() {
 
 // Run parses command line arguments and processes commands
 func (c *CommandClient) Run() {
-	c.checkArgs()
+	// c.checkArgs()
 
 	readmeCmd := flag.NewFlagSet("readme", flag.ExitOnError)
 
 	prepareCmd := flag.NewFlagSet("prepare", flag.ExitOnError)
+	dir := prepareCmd.String("dir", "practive/leetcode", "请输入你想要准备的题目的目录")
 	problemNumber := prepareCmd.Int("number", 0, "请输入你想要准备的题目的题号")
+	language := prepareCmd.String("lang", "golang", "请输入你想要准备的语言")
 
 	taskCmd := flag.NewFlagSet("task", flag.ExitOnError)
 	prefix := taskCmd.String("prefix", "", "答题任务的前缀")
@@ -87,7 +89,12 @@ func (c *CommandClient) Run() {
 		err := prepareCmd.Parse(os.Args[2:])
 		check(err)
 		build.CheckProblemNumValid(lc, *problemNumber)
-		problemBuilder := &build.ProblemBuilder{Builder: builder, ProblemNum: *problemNumber}
+		problemBuilder := &build.ProblemBuilder{
+			Builder:    builder,
+			Dir:        *dir,
+			ProblemNum: *problemNumber,
+			Language:   *language,
+		}
 		problemBuilder.Build()
 	case "task":
 		err := taskCmd.Parse(os.Args[2:])
